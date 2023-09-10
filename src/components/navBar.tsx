@@ -36,7 +36,7 @@ const NavBar = () => {
         Search for books
       </h1>
       <form className="nav-form" onSubmit={handleSubmit}>
-        <div className="nav-wrap" tabIndex={0}>
+        <div className="nav-wrap">
           <input
             className="nav-form__input"
             type="text"
