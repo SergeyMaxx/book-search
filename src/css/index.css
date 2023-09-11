@@ -192,6 +192,7 @@ body {
 .book-page__title {
   font-size: 50px;
   font-weight: 900;
+  margin-bottom: 10px;
 }
 
 .book-page-categories {

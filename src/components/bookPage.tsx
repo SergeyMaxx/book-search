@@ -26,10 +26,10 @@ const BookPage = ({id, books}: BooksListType) => {
           <p className="book-page-categories">
             {getBookById.volumeInfo.categories}
           </p>
+          <i className="book-item__i">{getBookById.volumeInfo.authors}</i>
           <p className="book-page__title">
             {getBookById.volumeInfo.title}
           </p>
-          <i className="book-item__i">{getBookById.volumeInfo.authors}</i>
           <p className="book-item__description">
             {getBookById.volumeInfo.description}
           </p>
