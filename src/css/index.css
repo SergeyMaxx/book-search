@@ -67,6 +67,11 @@ body {
   cursor: pointer;
 }
 
+.nav-img-search {
+  width: 24px;
+  height: 24px;
+}
+
 .nav-form__label {
   font-size: 20px;
   font-family: "Segoe UI", serif;
@@ -268,19 +273,19 @@ body {
   }
 }
 
-@media (max-width: 360px)  {
+@media (max-width: 360px) {
   .nav-header {
     font-size: 25px;
   }
 }
 
-@media (max-width: 465px)  {
+@media (max-width: 465px) {
   .nav-header {
     font-size: 30px;
   }
 }
 
-@media (max-width: 510px)  {
+@media (max-width: 510px) {
   .nav-container {
     display: flex;
     align-items: center;
@@ -290,5 +295,26 @@ body {
 
   .nav-form__label {
     color: #dcd4af;
+  }
+}
+
+@media (max-width: 666px)  {
+  .book-page__title {
+    font-size: 25px;
+    font-weight: 700;
+  }
+}
+
+@media (max-width: 826px) {
+  .nav-form__label {
+    color: #dcd4af;
+  }
+
+  .book-page {
+    flex-direction: column;
+  }
+
+  .book-page-wrap {
+    width: 100%;
   }
 }

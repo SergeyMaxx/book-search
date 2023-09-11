@@ -46,7 +46,7 @@ const NavBar = () => {
             placeholder="Enter your book name"
           />
           <button className="nav-form__button" type="submit">
-            <img src={glass} alt="img-glass" />
+            <img className="nav-img-search" src={glass} alt="img-glass" />
           </button>
         </div>
         <div className="nav-container">
