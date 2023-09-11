@@ -8,7 +8,7 @@ import {
   getSelectedCategory,
   getSelectedSort,
   getStartIndex,
-  loadBooksList,
+  loadBooksList, onClear,
   onQuery,
   onSearch,
   sortChoose
@@ -24,10 +24,13 @@ const NavBar = () => {
 
   const handleSubmit = (e: FormEvent) => {
     e.preventDefault()
-    search.trim() &&
-    dispatch(loadBooksList({search, startIndex, maxResults}))
-    dispatch(onQuery(search))
-    dispatch(onSearch(''))
+    dispatch(onClear())
+
+    if (search.trim()) {
+      dispatch(loadBooksList({search, startIndex, maxResults}))
+      dispatch(onQuery(search))
+      dispatch(onSearch(''))
+    }
   }
 
   return (

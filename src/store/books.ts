@@ -37,6 +37,9 @@ const booksSlice = createSlice({
     },
     nextPage(state) {
       state.startIndex += state.maxResults
+    },
+    clear(state) {
+      state.books = []
     }
   }
 })
@@ -48,7 +51,8 @@ const {
   setQuery,
   chooseCategory,
   chooseSort,
-  nextPage
+  nextPage,
+  clear
 } = booksSlice.actions
 
 const {reducer} = booksSlice
@@ -70,6 +74,7 @@ export const categoryChoose = (data: string) => chooseCategory(data)
 export const sortChoose = (data: string) => chooseSort(data)
 export const onSearch = (data: string) => setSearch(data)
 export const onQuery = (data: string) => setQuery(data)
+export const onClear = () => clear()
 export const loadMore = () => nextPage()
 export const getBooks = () => (state: RootState) => state.booksReducer.books
 export const getLoadingStatus = () => (state: RootState) => state.booksReducer.isLoading

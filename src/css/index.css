@@ -7,7 +7,7 @@
 
 body {
   background: url('../assets/books.jpg') 0 0;
-  background-size: cover;
+  background-size: auto ;
 }
 
 .app {
@@ -76,7 +76,7 @@ body {
   font-size: 20px;
   font-family: "Segoe UI", serif;
   font-weight: 600;
-  color: #545454;
+  color: #000;
 }
 
 .dropdown {
@@ -291,10 +291,7 @@ body {
     align-items: center;
     justify-content: center;
     flex-direction: column;
-  }
-
-  .nav-form__label {
-    color: #dcd4af;
+    margin-top: 10px;
   }
 }
 
@@ -306,10 +303,6 @@ body {
 }
 
 @media (max-width: 826px) {
-  .nav-form__label {
-    color: #dcd4af;
-  }
-
   .book-page {
     flex-direction: column;
   }
