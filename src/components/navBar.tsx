@@ -13,6 +13,7 @@ import {
   onSearch,
   sortChoose
 } from '../store/books'
+import {useHistory} from 'react-router-dom'
 
 const NavBar = () => {
   const search = useSelector(getSearch())
@@ -21,12 +22,14 @@ const NavBar = () => {
   const selectedCategory = useSelector(getSelectedCategory())
   const selectedSort = useSelector(getSelectedSort())
   const dispatch: any = useDispatch()
+  const history = useHistory()
 
   const handleSubmit = (e: FormEvent) => {
     e.preventDefault()
     dispatch(onClear())
 
     if (search.trim()) {
+      history.push('/')
       dispatch(loadBooksList({search, startIndex, maxResults}))
       dispatch(onQuery(search))
       dispatch(onSearch(''))
