@@ -6,7 +6,7 @@
 }
 
 body {
-  background: url('../assets/books.jpg') 0 0;
+  background: url('../assets/books.jpg') fixed 0 0;
   background-size: auto ;
 }
 
@@ -31,6 +31,7 @@ body {
   font-family: "Segoe UI", serif;
   color: #dadada;
   text-shadow: 2px 2px 2px #655757;
+  margin-bottom: 10px;
 }
 
 .nav-wrap {
@@ -50,6 +51,7 @@ body {
 }
 
 .nav-form__input {
+  flex-grow: 2;
   font-size: 20px;
   max-width: 220px;
   border: none;
@@ -76,12 +78,13 @@ body {
   font-size: 20px;
   font-family: "Segoe UI", serif;
   font-weight: 600;
-  color: #000;
+  color: #313131;
+  text-shadow: 1px 1px 1px #888;
 }
 
 .dropdown {
   padding: 10px;
-  margin: 10px;
+  margin: 15px 15px 0 15px;
   border-radius: 10px;
   transition: all 0.3s ease;
 }
@@ -108,11 +111,12 @@ body {
 .books-list-result {
   font-family: 'Segoe UI', serif;
   font-size: 24px;
-  color: #ffffff;
-  background: rgba(0, 0, 0, 0.4);
+  color: #ffa600;
+  text-shadow: 1px 1px 3px #000000;
+  background: rgba(0, 0, 0, 0.22);
   border-radius: 10px;
   padding: 10px 20px;
-  margin-bottom: 10px;
+  margin-bottom: 15px;
 }
 
 .load-more {
@@ -134,21 +138,24 @@ body {
 }
 
 .book-item {
-  min-height: 350px;
+  width: 280px;
+  min-height: 400px;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   flex-direction: column;
-  width: 249px;
   padding: 20px;
-  background: #626262;
+  background: rgba(98, 98, 98, 0.3);
   cursor: pointer;
-  color: #e9dad9;
+  color: #313131;
+  text-shadow: 1px 1px 1px #888;
   font-family: "Segoe UI", serif;
-  border: 2px solid #8d8d8d;
+  font-weight: 700;
+  border: 2px solid #727272;
   border-radius: 10px;
-  box-shadow: inset 3px 3px 10px #313131, inset -5px -5px 10px #888282;
+  box-shadow: inset 3px 3px 10px #313131, inset -3px -3px 10px #b4b4b4;
   transition: all ease-in 0.2s;
+  outline: 2px solid #505050;
 }
 
 .book-item:hover {
@@ -162,6 +169,8 @@ body {
 
 .book-item__title {
   margin: 10px 0;
+  max-height: 122px;
+  overflow: hidden;
 }
 
 .book-page {
