@@ -246,10 +246,6 @@ body {
   cursor: pointer;
 }
 
-.dropdown-link {
-  color: #fff;
-}
-
 .option {
   padding-bottom: 5px;
 }
@@ -265,7 +261,7 @@ body {
 }
 
 .selected {
-  background: #934602;
+  outline: 2px solid #abaaa5;
 }
 
 .menu {
@@ -276,7 +272,7 @@ body {
   padding: 0.2em 0.5em;
   color: #abaaa5;
   text-shadow: 1px 1px 3px #000000;
-  background: rgb(93, 68, 77);
+  background: rgb(110, 91, 97);
   opacity: 0;
   transform-origin: top;
   transform: scale(1, 0);
@@ -302,7 +298,7 @@ body {
 }
 
 .menu li:hover {
-  background: #934602;
+  outline: 2px solid #abaaa5;
 }
 
 .active {
