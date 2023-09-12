@@ -28,7 +28,7 @@ body {
 
 .nav-header {
   font-size: 50px;
-  font-family: "Segoe UI", serif;
+  font-family: "Segoe UI", Calibri, Arial, serif;
   color: #dadada;
   text-shadow: 2px 2px 2px #655757;
   margin-bottom: 10px;
@@ -76,7 +76,7 @@ body {
 
 .nav-form__label {
   font-size: 20px;
-  font-family: "Segoe UI", serif;
+  font-family: "Segoe UI", Calibri, Arial, serif;
   font-weight: 600;
   color: #313131;
   text-shadow: 1px 1px 1px #888;
@@ -109,7 +109,7 @@ body {
 }
 
 .books-list-result {
-  font-family: 'Segoe UI', serif;
+  font-family: "Segoe UI", Calibri, Arial, serif;
   font-size: 24px;
   color: #ffa600;
   text-shadow: 1px 1px 3px #000000;
@@ -120,7 +120,7 @@ body {
 }
 
 .load-more {
-  font-family: 'Segoe UI', serif;
+  font-family: "Segoe UI", Calibri, Arial, serif;
   font-size: 24px;
   color: #fff;
   padding: 10px 20px;
@@ -149,7 +149,7 @@ body {
   cursor: pointer;
   color: #313131;
   text-shadow: 1px 1px 1px #888;
-  font-family: "Segoe UI", serif;
+  font-family: "Segoe UI", Calibri, Arial, serif;
   font-weight: 700;
   border: 2px solid #727272;
   border-radius: 10px;
@@ -192,7 +192,7 @@ body {
   background: rgba(130, 113, 114, 0.86);
   width: 50%;
   font-size: 30px;
-  font-family: "Segoe UI", serif;
+  font-family: "Segoe UI", Calibri, Arial, serif;
   color: #dcd4af;
   padding: 20px;
   border-radius: 10px;
