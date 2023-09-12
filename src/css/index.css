@@ -7,7 +7,7 @@
 
 body {
   background: url('../assets/books.jpg') fixed 0 0;
-  background-size: auto ;
+  background-size: auto;
 }
 
 .app {
@@ -75,6 +75,8 @@ body {
 }
 
 .nav-form__label {
+  /*min-height: 51px;*/
+  width: 250px;
   font-size: 20px;
   font-family: "Segoe UI", Calibri, Arial, serif;
   font-weight: 600;
@@ -82,15 +84,12 @@ body {
   text-shadow: 1px 1px 1px #888;
 }
 
-.dropdown {
-  padding: 10px;
-  margin: 15px 15px 0 15px;
-  border-radius: 10px;
-  transition: all 0.3s ease;
-}
+.nav-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 15px 10px 0 10px;
 
-.dropdown:focus {
-  outline: none;
 }
 
 .item-container {
@@ -169,7 +168,12 @@ body {
 
 .book-item__title {
   margin: 10px 0;
-  max-height: 122px;
+  max-height: 45px;
+  overflow: hidden;
+}
+
+.book-item__authors {
+  max-height: 45px;
   overflow: hidden;
 }
 
@@ -217,8 +221,80 @@ body {
   font-size: 17px;
 }
 
-/* loader */
+/*select*/
+.dropdown {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  position: relative;
+  cursor: pointer;
+}
 
+.dropdown-link {
+  color: #fff;
+}
+
+.option {
+  padding-bottom: 5px;
+}
+
+.selected-option {
+  width: 130px;
+  color: #abaaa5;
+  text-shadow: 1px 1px 3px #000000;
+  background: rgba(0, 0, 0, 0.22);
+  border-radius: 7px;
+  padding: 7px 15px 8px;
+  cursor: pointer;
+}
+
+.selected {
+  background: #934602;
+}
+
+.menu {
+  position: absolute;
+  right: -20px;
+  top: 50px;
+  width: 200px;
+  padding: 0.2em 0.5em;
+  color: #abaaa5;
+  text-shadow: 1px 1px 3px #000000;
+  background: rgb(93, 68, 77);
+  opacity: 0;
+  transform-origin: top;
+  transform: scale(1, 0);
+  z-index: 1;
+  transition: all ease-out 0.2s;
+  border: 2px solid #727272;
+  border-radius: 10px;
+  outline: 2px solid #505050;
+}
+
+.menu-open {
+  opacity: 1;
+  transform: scale(1, 1);
+}
+
+.menu li {
+  display: block;
+  margin: 0.3em 0;
+  padding-left: 10px;
+  font-family: "Segoe UI", Calibri, Arial, serif;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.menu li:hover {
+  background: #934602;
+}
+
+.active {
+  background: #23242a;
+}
+
+
+/* loader */
 .lds-ellipsis {
   display: inline-block;
   position: relative;
@@ -295,7 +371,7 @@ body {
   }
 }
 
-@media (max-width: 510px) {
+@media (max-width: 580px) {
   .nav-container {
     display: flex;
     align-items: center;
@@ -305,7 +381,7 @@ body {
   }
 }
 
-@media (max-width: 666px)  {
+@media (max-width: 666px) {
   .book-page__title {
     font-size: 25px;
     font-weight: 700;

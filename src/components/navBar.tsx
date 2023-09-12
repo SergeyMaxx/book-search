@@ -14,6 +14,7 @@ import {
   sortChoose
 } from '../store/books'
 import {useHistory} from 'react-router-dom'
+import Select from './select'
 
 const NavBar = () => {
   const search = useSelector(getSearch())
@@ -23,6 +24,9 @@ const NavBar = () => {
   const selectedSort = useSelector(getSelectedSort())
   const dispatch: any = useDispatch()
   const history = useHistory()
+
+  const categories = ['all', 'art', 'biography', 'computers', 'history', 'medical', 'poetry']
+  const sort = ['relevance', 'newest']
 
   const handleSubmit = (e: FormEvent) => {
     e.preventDefault()
@@ -55,34 +59,21 @@ const NavBar = () => {
             <img className="nav-img-search" src={glass} alt="img-glass" />
           </button>
         </div>
-        <div className="nav-container">
-          <label className="nav-form__label" htmlFor="categories">Categories</label>
-          <select
-            className="dropdown"
-            id="categories"
-            value={selectedCategory}
-            onChange={e => dispatch(categoryChoose(e.target.value))}
-          >
-            <option value="all">all</option>
-            <option value="art">art</option>
-            <option value="biography">biography</option>
-            <option value="computers">computers</option>
-            <option value="history">history</option>
-            <option value="medical">medical</option>
-            <option value="poetry">poetry</option>
-          </select>
-          <label className="nav-form__label" htmlFor="sort">Sorting by</label>
-          <select
-            className="dropdown"
-            id="sort"
-            value={selectedSort}
-            onChange={e => dispatch(sortChoose(e.target.value))}
-          >
-            <option value="relevance">relevance</option>
-            <option value="newest">newest</option>
-          </select>
-        </div>
       </form>
+      <div className="nav-container">
+        <Select
+          name='Categories'
+          options={categories}
+          chooseOption={(data:string) => dispatch(categoryChoose(data))}
+          selectedOption={selectedCategory}
+        />
+        <Select
+          name='Sorting by'
+          options={sort}
+          chooseOption={(data:string) => dispatch(sortChoose(data))}
+          selectedOption={selectedSort}
+        />
+      </div>
     </div>
   )
 }

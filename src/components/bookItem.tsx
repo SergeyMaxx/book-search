@@ -16,10 +16,8 @@ const BookItem = ({book}: BookItemProps) => {
         alt="img"
       />
       <p>{book.volumeInfo.categories}</p>
-      <p className="book-item__title">
-        {book.volumeInfo.title}
-      </p>
-      <p>{book.volumeInfo.authors}</p>
+      <p className="book-item__title">{book.volumeInfo.title}</p>
+      <p className="book-item__authors">{book.volumeInfo.authors}</p>
     </li>
   )
 }

@@ -23,3 +23,10 @@ export interface QueryType {
   startIndex: number
   maxResults: number
 }
+
+export interface SelectType {
+  name: string
+  options: string[]
+  chooseOption: Function
+  selectedOption: string
+}
