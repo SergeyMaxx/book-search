@@ -140,7 +140,7 @@ body {
   min-height: 400px;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-around;
   flex-direction: column;
   padding: 20px;
   background: rgba(98, 98, 98, 0.3);
@@ -161,19 +161,36 @@ body {
 }
 
 .book-item__img {
+  height: 150px;
   margin-bottom: 20px;
   box-shadow: 10px 10px 10px #313131;
+}
+
+.book-item__wrap {
+  position: relative;
+  width: 236px;
 }
 
 .book-item__title {
   margin: 10px 0;
   max-height: 45px;
   overflow: hidden;
+  line-height: 22px;
+  font-size: 20px;
+  font-weight: 800;
+  color: #383737;
+}
+
+.book-item__categories {
+  color: #000;
+  text-decoration: underline;
 }
 
 .book-item__authors {
+  color: #ffa600;
   max-height: 45px;
   overflow: hidden;
+  text-shadow:  1px 1px 5px #000;
 }
 
 .book-page {
